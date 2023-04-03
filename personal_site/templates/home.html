@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+.content {
+  max-width: 960px;
+  margin: auto;
+  margin-left: 50px;
+  margin-right: -150px;
+  margin-top: 0px;
+}
+</style>
+<body>
+	<div style="background-image:url('static/linkedin_background.jpg'); background-size:100%; background-repeat: no-repeat; height:300px; width:1400px; margin-top:-120px; margin-left:-130px">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<img class="rounded-circle account-img" src="static/linkedin_pic.jpg" style="margin-left: 200px">
+	</div>
+<div class="content" style="height:350px; width:700px; margin-top:15px; margin-left:200px">
+	<h1> Hi, I'm Will </h1>
+	<br>
+	<p> I am an <b>engineer</b> who enjoys solving complex problems that will make the world a better place. My portfolio of experiences has been diverse, ranging from building chemical factories, to designing mutant bacteria, to building fun apps. Currently seeking new opportunities.</p>
+	<br>
+	<br>
+	<p> "The world I want to live in does not exist, so I am going to build it."</p>
+	<p> If you would like to help, let's <a href="{{ url_for('connect') }}">connect</a>. </p>
+</div>
+</body>
+{% endblock content %}

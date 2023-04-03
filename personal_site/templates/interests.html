@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+
+.content {
+  max-width: 960px;
+  margin: auto;
+  margin-left: 50px;
+  margin-right: -150px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+<body>
+	<div class='content'>
+		<div class="row">
+		  <div class="column">
+		    <h2><img class="rounded-circle account-img" src="static/engineering_icon.png">Engineering</h2>
+		    <p>I have always considered myself to be an engineer, even well before my technical training. As a kid, I was constantly breaking things apart and trying to figure out how things work. In 2019, I received my B.S. in Chemical Eningeering from the University of Tennessee at Chattanooga. Since then, I have worked on several engineering projects, including designing a toting system for a toxic polymer, and designing a full scale factory for producing cumene. </p>
+
+		    <h2><img class="rounded-circle account-img" src="static/sustainability2.png">Sustainability</h2>
+		    <p>I have always felt a deep connection to earth, and it is clear that she needs our help. This has been one of my biggest motivatiors for all my career decisions. In addition to my professional life, I also enjoy gardening, hiking, and developing small-scale, renewable batteries. </p>
+
+		    <h2><img class="rounded-circle account-img" src="static/game_icon.png">Games</h2>
+		    <p> Lover of all games and naturally competitive. Favorite games are soccer and chess.</p>
+
+		  </div>
+		  
+		  <div class="column">
+		    <h2><img class="rounded-circle account-img" src="static/biotech_icon.png" style="size:50%">Biotechnology</h2>
+		    <p> If you have a problem, chances are somewhere in nature you can find the solution. This is why as an avid problem solver, I am constantly looking to nature for inspiration. I have worked on several biotechnology projects, including designing bacterial cell factories, creating highly thermotolerant bacteria, and studying the relationship between epigenetics and cancer. In addition to my professional life, I also enjoy making my own kombucha with fermentation and producing electricity from mud using microbes. </p>
+
+		    <h2><img class="rounded-circle account-img" src="static/coding_icon.png">Coding</h2>
+		    <p>By default, as an engineer, I am a <i>doer.</i> Therfore, I became intriqued in utilizing computing power to help get me get stuff done, and taught myself to code. I have developed several projects that have literally saved 100's of years of man power, check out my <a href="https://github.com/willchenko">GitHub</a> for more information. </p>
+
+		    <h2><img class="rounded-circle account-img" src="static/meditation_icon.jpg">Meditation</h2>
+		    <p> "Prayer is when you speak to God, meditation is when God speaks to you." I am continuously fascinated by everything that goes on in my brain, and what happens when it stops.</p>
+		  </div>
+	  	</div>
+	</div>
+</body>
+{% endblock content %}

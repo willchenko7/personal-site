@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+
+.content {
+  max-width: 960px;
+  margin: auto;
+  margin-left: 50px;
+  margin-right: -150px;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+<body>
+	<div class='content'>
+		<div class='row'>
+
+		<div class="column side">
+			<br> 
+			<p></p>
+			<img class="rounded-circle account-img" src="static/tlf_logo.png">
+			<br>
+			<br>
+			<img class="rounded-circle account-img" src="static/MPACT3.png">
+		</div>
+
+		<div class="middle">
+			<p> Check out some of the apps that I've made! </p>
+
+			<br>
+
+			<h5> LikesFlashback </h5>
+				<p> <a href="//www.likesflashback.com">www.likesflashback.com</a> </p>
+				<ul>
+					<li> Makes it easy to explore your old twitter likes. </li>
+				</ul>
+
+			<br>
+			<br>
+
+			<h5> Metabolic Pathway Curation Tool (MPACT) </h5>
+				<p> <a href="https://www.curatemetabolicpathways.com">www.curatemetabolicpathways.com</a></p>
+				<ul>
+					<li> Automates metabolic pathway curation. </li>
+				</ul>
+			
+		</div>
+</div>
+</body>
+{% endblock content %}
