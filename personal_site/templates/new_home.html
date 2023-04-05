@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avatar and Text</title>
+    <style>
+        body {
+            background-image: url("static/stars.jpg");
+            background-repeat: repeat;
+            background-size: cover;
+            color: white;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 50px;
+        }
+
+        .text {
+            text-align: justify;
+            max-width: 800px;
+        }
+
+        .text p:first-child {
+            margin-top: 0;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px white;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="#">About me</a>
+        <a href="#">Portfolio</a>
+        <a href="{{ url_for('resume') }}">Resume</a>
+        <a href="{{ url_for('connect') }}">Connect</a>
+    </div>
+    <div class="center">
+        <div class="container">
+            <img class="avatar" src="static/avatar.jpg" alt="avatar">
+            <div class="text">
+                <p>Welcome to my website! I'm a programmer with a passion for solving complex problems and creating efficient solutions. With over 5 years of experience, I've developed a particular expertise in Python and SQL, which are the languages I'm most proficient in. In addition, I have a strong background in scientific computing, particularly in chemical engineering and bioinformatics.</p>
+            </div>
+        </div>
+        <div class="text">
+            <p>My main goal as a programmer is to use technology to make people's lives easier and more productive. Whether it's developing web applications, automating repetitive tasks, or analyzing data to uncover insights, I always strive to create high-quality code that is maintainable, scalable, and easy to understand.</p>
+            <p>On this website, you'll find more information about my skills, experience, and projects in both scientific computing and software development. You'll also have the opportunity to learn more about the services I offer, such as data analysis and consulting for chemical engineering and bioinformatics applications, as well as software development. If you have any questions or are interested in working with me, please don't hesitate to contact me. I'm always looking for new challenges and opportunities to learn and grow as a programmer.</p>
+        </div>
+    </div>
+</body>
+</html>

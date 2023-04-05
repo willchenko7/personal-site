@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 24px;
+        }
+
+        .center {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .section {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .section-header {
+            font-size: 30px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .section-header + ul {
+            margin-top: 20px;
+        }
+
+        .section-header + ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="#">About me</a>
+        <a href="#">Portfolio</a>
+        <a href="{{ url_for('resume') }}">Resume</a>
+        <a href="{{ url_for('connect') }}">Connect</a>
+    </div>
+    <br></br>
+    <div class="center">
+        <div class="section">
+            <h1>Will Khomtchenko</h1>
+            <p>(615) 337-5937 | willchenko7@gmail.com</p>
+        </div>
+        <div class="section">
+            <h2 class="section-header">Experience</h2>
+            <ul>
+                <li>
+                    <h3>Software Engineer II</h3>
+                    <p>Sasaki Evolutionary Integrated Services | Remote</p>
+                    <p>March 2022 - Present</p>
+                    <ul style="list-style-type: circle; padding-left: 40px;">
+                        <li>Develop and maintain software applications for clients in a variety of industries.</li>
+                        <li>Collaborate with team members on software design and implementation.</li>
+                        <li>Participate in code reviews to ensure high-quality, maintainable code.</li>
+                        <li>Provide technical support and troubleshooting for clients.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Data Analyst</h3>
+                    <p>Saint Paul Commodities | Chattanooga, TN</p>
+                    <p>June 2018 - January 2020</p>
+                    <ul style="list-style-type: circle; padding-left: 40px;">
+                        <li>Conducted data analysis and created visualizations to help inform business decisions.</li>
+                        <li>Developed and maintained data pipelines and ETL processes.</li>
+                        <li>Collaborated with stakeholders to define data requirements and ensure data quality.</li>
+                        <li>Automated data processing tasks to improve efficiency and reduce errors.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Education</h2>
+            <ul>
+                <li>
+                    <h3>Master of Science in Chemical Engineering</h3>
+                    <p>University of Tennessee | Knoxville, TN</p>
+                    <p>Graduated May 2022</p>
+                </li>
+                <li>
+                    <h3>Bachelor of Science in Chemical Engineering</h3>
+                    <p>University of Tennessee | Chattanooga, TN</p>
+                    <p>Graduated May 2019</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Skills</h2>
+            <ul style="list-style-type: circle; padding-left: 40px;">
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
